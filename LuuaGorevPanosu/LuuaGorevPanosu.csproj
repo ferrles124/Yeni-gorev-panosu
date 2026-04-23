@@ -3,6 +3,9 @@
     <AssemblyName>LuuaGorevPanosu</AssemblyName>
     <Version>1.0.0</Version>
     <TargetFramework>net6.0</TargetFramework>
+    <EnableModDeploy>false</EnableModDeploy>
+    <GamePath Condition="'$(CI)' != 'true'">$(StardewValleyGamePath)</GamePath>
+    <GamePath Condition="'$(CI)' == 'true'">.</GamePath>
   </PropertyGroup>
 
   <ItemGroup>
