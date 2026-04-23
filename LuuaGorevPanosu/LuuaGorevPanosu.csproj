@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
+    <ProjectReference Include="..\stubs\SMAPIStub.csproj" />
+    <ProjectReference Include="..\stubs\StubLibs.csproj" />
   </ItemGroup>
 </Project>
