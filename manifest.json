@@ -1,0 +1,12 @@
+{
+  "Name": "Yeni Gorev Panosu",
+  "Author": "ferrles124",
+  "Version": "1.0.0",
+  "Description": "Kasabaya yeni bir görev panosu ekler.",
+  "UniqueID": "SeninAdin.YeniGorevPanosu",
+  "UpdateKeys": [],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher",
+    "MinimumVersion": "1.29.0"
+  }
+}
