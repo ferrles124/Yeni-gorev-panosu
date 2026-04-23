@@ -24,7 +24,7 @@ namespace LuuaGorevPanosu
 
                 if (location.Name == "Town" && tile.X == 11 && tile.Y == 23)
                 {
-                    Game1.showGlobalMessage("Buraya yakinda gorevler eklenecek!");
+                    Monitor.Log("Panoya tiklandi! Gorevler yakinda eklenecek.", LogLevel.Info);
                 }
             }
         }
