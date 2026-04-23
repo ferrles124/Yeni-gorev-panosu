@@ -16,6 +16,11 @@
           }
         }
       ]
+    },
+    {
+      "Action": "Load",
+      "Target": "assets/YeniPano.png",
+      "FromFile": "assets/YeniPano.png"
     }
   ]
 }
