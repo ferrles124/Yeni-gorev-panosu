@@ -24,7 +24,7 @@ namespace LuuaGorevPanosu
 
                 if (location.Name == "Town" && tile.X == 11 && tile.Y == 23)
                 {
-                    Game1.drawDialogueBox(0, 0, 800, 200, false, true, "Buraya yakinda gorevler eklenecek!", null, false);
+                    Game1.showGlobalMessage("Buraya yakinda gorevler eklenecek!");
                 }
             }
         }
