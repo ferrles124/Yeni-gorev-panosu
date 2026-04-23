@@ -16,16 +16,27 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 6.0.x
+
+    - name: Download Stardew Valley DLLs
+      run: |
+        mkdir -p $HOME/stardew
         
+        FILE_ID="12tXWHUfUPeOtW-gaL2HepY_44SWTAjWN"
+        curl -L "https://drive.google.com/uc?export=download&id=${FILE_ID}&confirm=t" -o "$HOME/stardew/Stardew Valley.dll"
+        
+        FILE_ID2="1mdSKSSeWkdeQXtRJNp7944kM93jv-mIp"
+        curl -L "https://drive.google.com/uc?export=download&id=${FILE_ID2}&confirm=t" -o "$HOME/stardew/StardewValley.GameData.dll"
+        
+        FILE_ID3="1-tx2TMjISZsa223YF2DvrJeRLID02-Su"
+        curl -L "https://drive.google.com/uc?export=download&id=${FILE_ID3}&confirm=t" -o "$HOME/stardew/StardewModdingAPI.dll"
+
     - name: Restore dependencies
       run: dotnet restore
       working-directory: ./LuuaGorevPanosu
       
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore -p:GamePath=$HOME/stardew
       working-directory: ./LuuaGorevPanosu
-      env:
-        CI: true
       
     - name: Upload artifact
       uses: actions/upload-artifact@v4
