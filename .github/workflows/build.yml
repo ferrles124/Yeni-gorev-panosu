@@ -19,7 +19,7 @@ jobs:
         
     - name: Build stubs
       run: dotnet build --configuration Release
-      working-directory: ./stubs
+      working-directory: ./StubLibs
       
     - name: Restore dependencies
       run: dotnet restore
