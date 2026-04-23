@@ -17,15 +17,19 @@ jobs:
       with:
         dotnet-version: 6.0.x
         
-    - name: Build stubs
-      run: dotnet build --configuration Release
+    - name: Build Stardew Valley stub
+      run: dotnet build StubLibs.csproj --configuration Release
+      working-directory: ./StubLibs
+      
+    - name: Build SMAPI stub
+      run: dotnet build SMAPIStub.csproj --configuration Release
       working-directory: ./StubLibs
       
     - name: Restore dependencies
       run: dotnet restore
       working-directory: ./LuuaGorevPanosu
       
-    - name: Build
+    - name: Build mod
       run: dotnet build --configuration Release --no-restore
       working-directory: ./LuuaGorevPanosu
       
