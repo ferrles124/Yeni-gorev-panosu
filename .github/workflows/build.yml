@@ -17,16 +17,10 @@ jobs:
       with:
         dotnet-version: 6.0.x
         
-    - name: Create fake game folder
-      run: |
-        mkdir -p $HOME/stardew
-        touch "$HOME/stardew/Stardew Valley.exe"
-        touch "$HOME/stardew/StardewValley.dll"
-        touch "$HOME/stardew/StardewValley.GameData.dll"
-        touch "$HOME/stardew/StardewModdingAPI.dll"
-        touch "$HOME/stardew/MonoGame.Framework.dll"
-        touch "$HOME/stardew/xTile.dll"
-
+    - name: Build stubs
+      run: dotnet build --configuration Release
+      working-directory: ./stubs
+      
     - name: Restore dependencies
       run: dotnet restore
       working-directory: ./LuuaGorevPanosu
@@ -34,11 +28,9 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
       working-directory: ./LuuaGorevPanosu
-      env:
-        SMAPI_GAME_PATH: $HOME/stardew
       
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: LuuaGorevPanosu
-        path: ./LuuaGorevPanosu/bin/Release/net6.0/
+        path: ./LuuaGorevPanosu/bin/Release/
