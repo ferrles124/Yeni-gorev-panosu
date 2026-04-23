@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\stubs\SMAPIStub.csproj" />
-    <ProjectReference Include="..\stubs\StubLibs.csproj" />
+    <ProjectReference Include="..\StubLibs\SMAPIStub.csproj" />
+    <ProjectReference Include="..\StubLibs\StubLibs.csproj" />
   </ItemGroup>
 </Project>
