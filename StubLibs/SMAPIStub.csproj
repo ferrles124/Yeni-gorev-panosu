@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>StardewModdingAPI</AssemblyName>
     <Nullable>disable</Nullable>
   </PropertyGroup>
@@ -9,7 +9,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Stardew Valley">
-      <HintPath>bin/Release/net6.0/Stardew Valley.dll</HintPath>
+      <HintPath>bin/Release/net8.0/Stardew Valley.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
