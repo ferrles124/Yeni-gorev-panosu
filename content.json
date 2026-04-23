@@ -1,0 +1,21 @@
+{
+  "Format": "1.29.0",
+  "Changes": [
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "MapTiles": [
+        {
+          "Position": { "X": 11, "Y": 23 },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": {
+              "Type": "string",
+              "Value": "LuuaGorevPanosu"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
